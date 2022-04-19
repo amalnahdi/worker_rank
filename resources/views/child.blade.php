@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('child')
-hello world
+hello 
 
 <ul>
 

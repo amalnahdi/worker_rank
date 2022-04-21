@@ -9,3 +9,4 @@ background-size: cover;
     color: red;
     font-size: 1.5em;
   }
+  .btn-inline a{ display: inline-block; }

@@ -88,18 +88,30 @@ projects and businesses
         <div class="col-sm-9" style="display: flex;flex-direction:column;align-items:center;justify-content:center;height:100vh">
             <div style="display: flex;flex-direction:column;justify-content:center">
                     <h2 class="text-white text-center">Sign in</h2>
-                    <h3 class="text-center text-white">To interact with your account</h3>
+                    <h3 class="text-center  text-muted">To interact with your account</h3>
             </div>
             <div>
-{{-- 7el form                 --}}
+               <form method="POST" action="{{ route('login') }}">
+            @csrf
 
                 <div class="form-group">
-                    <input type="email" style="background-color:#E8EFFC" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  </div>
-{{-- saker form                 --}}
+                   <div>Email <input type="email" name="email" style=" background-color:#E8EFFC ; margin-bottom: 30px" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">  </div>
+                   <div>Password <input type="password" name="password" style="background-color:#E8EFFC  ; margin-bottom: 30px" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp" placeholder="Enter password">  </div>
+                </div>
+               <div class="preference">
+                    <label for="cheese">Remember me </label>
+                    <input type="checkbox" name="remember" id="rememberMe"> 
+                    <a href="#" class="link-info">Forget Password</a>                    
+                </div>
+                <div> <button type="submit" class="btn btn-secondary btn-dark">Sign In</button>
+                    <td width="100%"> 
+                    <div class="container btn-inline"> </div>
+              
+                </form>
+
 
             </div>
-            <div>
+            <div> <p>Don't have an account yet? Read Our </p><button type="button" class="btn btn-link">Terms and Policy</button>
                 {{-- Don't have an account yet? Sign Up --}}
             </div>
 

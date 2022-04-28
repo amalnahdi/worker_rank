@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+@include_once('admin_web.php');
 Route::get('/', function () {
     return view('home');
 });
@@ -24,3 +24,13 @@ Route::get('/recover', function () {
     //return view('home');
     return 'recover password' ; 
 });
+Route::view('sample-page', 'admin.pages.sample-page')->name('sample-page');
+
+Route::prefix('dashboard')->group(function () {
+    Route::view('/', 'admin.dashboard.default')->name('index');
+    Route::view('default', 'admin.dashboard.default')->name('dashboard.index');
+});
+
+Route::view('default-layout', 'multiple.default-layout')->name('default-layout');
+Route::view('compact-layout', 'multiple.compact-layout')->name('compact-layout');
+Route::view('modern-layout', 'multiple.modern-layout')->name('modern-layout');

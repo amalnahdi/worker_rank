@@ -22,13 +22,13 @@
 
 </head>
 <body   >
-    @if( Route::current()->uri()== 'login')
+    @if( Route::current()->uri()== 'login' ||Route::current()->uri()== 'register' )
     <div id="app" class="homepage h-100 ">
 
     @else
     <div id="app min-h-100">
     @endif
-        <ul class="nav justify-content-end">
+        <ul class="nav justify-content-end bg-dark">
             <li class="nav-item">
               <a class="nav-link active" href="#">Home</a>
             </li>

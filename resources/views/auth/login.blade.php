@@ -87,9 +87,9 @@ projects and businesses
         </div>
         <div class="col-sm-9" style="display: flex;flex-direction:column;align-items:center;justify-content:center;height:100vh">
             <div style="display: flex;flex-direction:column;justify-content:center">
-                    <h2 class="text-white text-center">Sign in</h2>
-                    <h3 class="text-center  text-muted">To interact with your account</h3>
-            </div>
+                <h2 class="text-white text-center">Sign in</h2>
+                <h3 class="text-center  text-muted">To interact with your account</h3>
+        </div>
             <div>
                <form method="POST" action="{{ route('login') }}">
             @csrf

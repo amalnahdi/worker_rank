@@ -1,7 +1,8 @@
 @extends('layouts.app2')
 
 @section('child')
-<div class="container " >
+<link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+<div class="container-fluid min-vh-100 bg-dark">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

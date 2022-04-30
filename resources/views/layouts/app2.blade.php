@@ -22,28 +22,28 @@
 
 </head>
 <body   >
-    @if( Route::current()->uri()== 'login')
+    @if( Route::current()->uri()== 'login' ||Route::current()->uri()== 'register' )
     <div id="app" class="homepage h-100 ">
 
     @else
     <div id="app min-h-100">
     @endif
-        <ul class="nav justify-content-end">
+        <ul class="nav justify-content-end bg-dark">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Active</a>
+              <a class="nav-link active" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#services">services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="{{ route('home')}}">create cv</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="#Contact Us" > Contact Us </a>
             </li>
             @guest
             <li class="nav-item">
-                <a class="nav-link " href="/login" tabindex="-1" aria-disabled="true">login </a>
+                <a class="nav-link " href="{{ route('home')}}"  >login </a>
               </li>
             @else
             <li class="nav-item">
